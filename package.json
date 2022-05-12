@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "name": "default-dark-syntax",
-  "description": "Default dark syntax theme",
+  "version": "0.1.0",
+  "name": "monokai-dark-syntax",
+  "description": "Monokai Dark Syntax Theme for Inkdrop",
   "theme": "syntax",
   "scripts": {
     "build": "lessc styles/less/default.less ./styles/index.css"
@@ -12,6 +12,13 @@
   "engines": {
     "inkdrop": "^5.x"
   },
+  "keywords": [
+    "inkdrop",
+    "markdown"
+  ],
+  "author": "Alexander Eckert",
+  "repository": "https://github.com/eckertalex/inkdrop-monokai-dark-syntax-theme",
+  "license": "MIT",
   "devDependencies": {
     "less": "^3.11.3"
   }
