@@ -2,10 +2,21 @@
 
 > Monokai Dark Syntax theme for Inkdrop.
 
-# Install
+## Screenshot
+
+![Inkdrop Monokai](inkdrop-monokai.png)
+
+## Install
 
 ```
 ipm install monokai-dark-syntax
+```
+
+## Want the full Monokai Package?
+
+```
+ipm install monokai-dark-ui
+ipm install monokai-preview
 ```
 
 ## Credits/Disclaimer
