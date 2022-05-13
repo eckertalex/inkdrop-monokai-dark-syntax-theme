@@ -1,36 +1,45 @@
 @import "./colors";
+@import "./cm-monokai";
 
 .editor {
   .CodeMirror {
-    // Background color of main window
+    // main window
     background-color: @monokaiBlack;
+    color: @monokaiWhite;
   }
+
   .CodeMirror-scroll,
   .CodeMirror-dialog {
     // Color of otherwise un-styled text
     color: @monokaiWhite;
   }
+
   .CodeMirror-gutters {
     // Gutter to the left
     background-color: transparent;
     border-right: 1px solid @monokaiInteraction;
   }
+
   .CodeMirror-linenumber {
     // Line numbers in the gutter
     color: @monokaiGrey4;
   }
+
   .CodeMirror-selected {
     // Highlighed text
     background-color: @monokaiGrey5;
   }
+
   .CodeMirror-focused .CodeMirror-selected {
     // Highlighed text
     background-color: @monokaiGrey5;
   }
+
   .CodeMirror-cursor {
     // The cursor
     border-left: 1px solid @monokaiGrey2;
   }
+
   .CodeMirror-matchingbracket,
   .CodeMirror-matchingtag {
     // When you click a tag/bracket and the matching one is highlighted
@@ -38,14 +47,17 @@
     color: @monokaiWhite !important;
     background: @monokaiBlack !important;
   }
+
   .CodeMirror-foldgutter-open:after {
     // Those little arrows in the gutter
     color: @monokaiGrey1;
   }
+
   .CodeMirror-foldgutter-folded:after {
     // The arrows after you collapse code
     color: @monokaiGrey1;
   }
+
   .CodeMirror.over-gutter,
   .CodeMirror-activeline {
     .CodeMirror-foldgutter-open:after {
@@ -53,121 +65,29 @@
       color: @monokaiGrey5;
     }
   }
+
   .CodeMirror-foldmarker {
     // The [...] marking collapsed code
     border-color: @monokaiGrey5;
     background-color: @monokaiGrey5;
     color: @monokaiGrey3;
   }
+
   .CodeMirror .CodeMirror-linewidget img.inline-widget {
     background: @monokaiInteractionInverted;
   }
-  .cm-searching {
-    // Ctrl + F results
-    outline: 1px solid @monokaiYellow;
-    background-color: transparent;
-  }
 
   /* All 'dem swatches */
-
   .CodeMirror {
-    .cm-string.cm-url {
-      color: @monokaiGreen;
-      text-decoration: underline;
+    span {
+      .cm-monokai();
     }
-    .cm-link-footref2,
-    .cm-link-barelink,
-    .cm-formatting-link.cm-link-barelink {
-      color: @monokaiWhite !important;
-    }
-    .cm-formatting-link,
-    .cm-formatting-link-string,
-    .cm-formatting-image,
-    .cm-formatting-list,
-    .cm-formatting-quote,
-    .cm-formatting-strong,
-    .cm-formatting-em {
-      color: @monokaiGrey2 !important;
-      text-decoration: none;
-    }
-    .cm-string {
-      color: @monokaiYellow;
-    }
-    .cm-atom,
-    .cm-string-2,
-    .cm-hr {
-      color: @monokaiGreen;
-    }
-    .cm-number,
-    .cm-attribute,
-    .cm-plus {
-      color: @monokaiRed;
-    }
-    .cm-def,
-    .cm-property {
-      color: @monokaiWhite;
-    }
-    .cm-variable {
-      color: @monokaiGreen;
-    }
-    .cm-keyword,
-    .cm-operator,
-    .cm-meta {
-      color: @monokaiRed;
-    }
-    .cm-bracket {
-      color: @monokaiGrey2 !important;
-    }
-    .cm-comment {
-      color: @monokaiGrey3;
-      font-style: italic;
-    }
-    .cm-error,
-    .cm-minus {
-      color: @monokaiRed;
-    }
-    .cm-formatting-header {
-      opacity: 0.3;
-    }
-    .cm-header {
-      color: @monokaiYellow;
-    }
-    .cm-link.cm-link-footnote {
-      color: @monokaiWhite;
-    }
-    .cm-link {
-      color: @monokaiRed;
-      text-decoration: none;
-    }
-    .cm-rangeinfo {
-      color: @monokaiWhite;
-    }
-    .cm-builtin {
-      color: @monokaiBlue;
-    }
-    .cm-qualifier,
-    .cm-tag {
-      color: @monokaiRed;
-    }
-    .cm-quote {
-      font-style: italic;
-    }
-    .cm-whitespace::before {
-      color: @monokaiGrey4;
-    }
-    .cm-hr {
-      color: @monokaiWhite;
-    }
+
     // carriage return
     .CodeMirror-code > div > pre > span::after,
     .CodeMirror-line > span::after {
       color: @monokaiGrey4;
       opacity: 0.4;
-    }
-
-    .cm-inline-code {
-      background: @monokaiInteraction;
-      color: @monokaiOrange;
     }
   }
 

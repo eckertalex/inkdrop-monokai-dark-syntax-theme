@@ -4,6 +4,7 @@
 }
 .editor .CodeMirror {
   background-color: #2d2a2e;
+  color: #ffffff;
 }
 .editor .CodeMirror-scroll,
 .editor .CodeMirror-dialog {
@@ -49,105 +50,138 @@
 .editor .CodeMirror .CodeMirror-linewidget img.inline-widget {
   background: rgba(0, 0, 0, 0.1);
 }
-.editor .cm-searching {
+.editor .CodeMirror span .cm-searching {
   outline: 1px solid #ffd866;
   background-color: transparent;
 }
-.editor .CodeMirror .cm-string.cm-url {
-  color: #a9dc76;
-  text-decoration: underline;
-}
-.editor .CodeMirror .cm-link-footref2,
-.editor .CodeMirror .cm-link-barelink,
-.editor .CodeMirror .cm-formatting-link.cm-link-barelink {
-  color: #ffffff !important;
-}
-.editor .CodeMirror .cm-formatting-link,
-.editor .CodeMirror .cm-formatting-link-string,
-.editor .CodeMirror .cm-formatting-image,
-.editor .CodeMirror .cm-formatting-list,
-.editor .CodeMirror .cm-formatting-quote,
-.editor .CodeMirror .cm-formatting-strong,
-.editor .CodeMirror .cm-formatting-em {
-  color: #939293 !important;
-  text-decoration: none;
-}
-.editor .CodeMirror .cm-string {
-  color: #ffd866;
-}
-.editor .CodeMirror .cm-atom,
-.editor .CodeMirror .cm-string-2,
-.editor .CodeMirror .cm-hr {
-  color: #a9dc76;
-}
-.editor .CodeMirror .cm-number,
-.editor .CodeMirror .cm-attribute,
-.editor .CodeMirror .cm-plus {
-  color: #ff6188;
-}
-.editor .CodeMirror .cm-def,
-.editor .CodeMirror .cm-property {
-  color: #ffffff;
-}
-.editor .CodeMirror .cm-variable {
-  color: #a9dc76;
-}
-.editor .CodeMirror .cm-keyword,
-.editor .CodeMirror .cm-operator,
-.editor .CodeMirror .cm-meta {
-  color: #ff6188;
-}
-.editor .CodeMirror .cm-bracket {
-  color: #939293 !important;
-}
-.editor .CodeMirror .cm-comment {
+.editor .CodeMirror span .cm-comment {
   color: #727072;
   font-style: italic;
 }
-.editor .CodeMirror .cm-error,
-.editor .CodeMirror .cm-minus {
-  color: #ff6188;
+.editor .CodeMirror span .cm-comment .cm-attribute {
+  color: #a9dc76;
 }
-.editor .CodeMirror .cm-formatting-header {
-  opacity: 0.3;
+.editor .CodeMirror span .cm-comment .cm-tag {
+  color: #ef9daa;
 }
-.editor .CodeMirror .cm-header {
+.editor .CodeMirror span .cm-comment .cm-type {
+  color: #5adec4;
+}
+.editor .CodeMirror span .cm-atom,
+.editor .CodeMirror span .cm-number {
+  color: #ab9df2;
+}
+.editor .CodeMirror span .cm-property,
+.editor .CodeMirror span .cm-attribute {
+  color: #a9dc76;
+}
+.editor .CodeMirror span .cm-header,
+.editor .CodeMirror span .cm-string {
   color: #ffd866;
 }
-.editor .CodeMirror .cm-link.cm-link-footnote {
-  color: #ffffff;
+.editor .CodeMirror span .cm-variable,
+.editor .CodeMirror span .cm-tag.cm-bracket {
+  color: #fcfcfa;
 }
-.editor .CodeMirror .cm-link {
+.editor .CodeMirror span .cm-builtin,
+.editor .CodeMirror span .cm-type {
+  color: #78dce8;
+}
+.editor .CodeMirror span .cm-def {
+  color: #fc9867;
+}
+.editor .CodeMirror span .cm-tag,
+.editor .CodeMirror span .cm-keyword {
+  color: #ff6188;
+}
+.editor .CodeMirror span .cm-link {
   color: #ff6188;
   text-decoration: none;
 }
-.editor .CodeMirror .cm-rangeinfo {
-  color: #ffffff;
+.editor .CodeMirror span .cm-error {
+  background: #ff6188;
+  color: #fcfcfa;
 }
-.editor .CodeMirror .cm-builtin {
-  color: #78dce8;
+.editor .CodeMirror span .cm-string.cm-url {
+  color: #a9dc76;
+  text-decoration: underline;
 }
-.editor .CodeMirror .cm-qualifier,
-.editor .CodeMirror .cm-tag {
+.editor .CodeMirror span .cm-link-footref2,
+.editor .CodeMirror span .cm-link-barelink,
+.editor .CodeMirror span .cm-formatting-link.cm-link-barelink {
+  color: #ffffff !important;
+}
+.editor .CodeMirror span .cm-formatting-link,
+.editor .CodeMirror span .cm-formatting-link-string,
+.editor .CodeMirror span .cm-formatting-image,
+.editor .CodeMirror span .cm-formatting-list,
+.editor .CodeMirror span .cm-formatting-quote,
+.editor .CodeMirror span .cm-formatting-strong,
+.editor .CodeMirror span .cm-formatting-em {
+  color: #939293 !important;
+  text-decoration: none;
+}
+.editor .CodeMirror span .cm-string-2 {
+  color: #a9dc76;
+}
+.editor .CodeMirror span .cm-plus {
   color: #ff6188;
 }
-.editor .CodeMirror .cm-quote {
+.editor .CodeMirror span .cm-operator,
+.editor .CodeMirror span .cm-meta {
+  color: #ff6188;
+}
+.editor .CodeMirror span .cm-minus {
+  color: #ff6188;
+}
+.editor .CodeMirror span .cm-formatting-header {
+  opacity: 0.3;
+}
+.editor .CodeMirror span .cm-link.cm-link-footnote {
+  color: #ffffff;
+}
+.editor .CodeMirror span .cm-rangeinfo {
+  color: #ffffff;
+}
+.editor .CodeMirror span .cm-qualifier {
+  color: #ff6188;
+}
+.editor .CodeMirror span .cm-quote {
   font-style: italic;
 }
-.editor .CodeMirror .cm-whitespace::before {
+.editor .CodeMirror span .cm-whitespace::before {
   color: #5b595c;
 }
-.editor .CodeMirror .cm-hr {
+.editor .CodeMirror span .cm-hr {
   color: #ffffff;
+}
+.editor .CodeMirror span .cm-inline-code {
+  background: rgba(252, 252, 250, 0.05);
+  color: #ff6188;
+}
+.editor .CodeMirror span .cm-negative {
+  color: #ff6188;
+}
+.editor .CodeMirror span .cm-positive {
+  color: #a9dc76;
+}
+.editor .CodeMirror span .cm-header,
+.editor .CodeMirror span .cm-strong {
+  font-weight: bold;
+}
+.editor .CodeMirror span .cm-em {
+  font-style: italic;
+}
+.editor .CodeMirror span .cm-strikethrough {
+  text-decoration: line-through;
+}
+.editor .CodeMirror span .cm-punctuation {
+  color: #fcfcfa;
 }
 .editor .CodeMirror .CodeMirror-code > div > pre > span::after,
 .editor .CodeMirror .CodeMirror-line > span::after {
   color: #5b595c;
   opacity: 0.4;
-}
-.editor .CodeMirror .cm-inline-code {
-  background: rgba(252, 252, 250, 0.05);
-  color: #fc9867;
 }
 .editor .CodeMirror-activeline-background,
 .editor .CodeMirror-activeline-gutter {
