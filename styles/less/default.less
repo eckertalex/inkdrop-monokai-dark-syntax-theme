@@ -1,173 +1,179 @@
 @import "./colors";
 
 .editor {
-
   .CodeMirror {
     // Background color of main window
-    background-color: @base00;
+    background-color: @monokaiBlack;
   }
-  .CodeMirror-scroll, .CodeMirror-dialog {
+  .CodeMirror-scroll,
+  .CodeMirror-dialog {
     // Color of otherwise un-styled text
-    color: @base01;
+    color: @monokaiWhite;
   }
   .CodeMirror-gutters {
     // Gutter to the left
     background-color: transparent;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid @monokaiInteraction;
   }
   .CodeMirror-linenumber {
     // Line numbers in the gutter
-    color: @base06;
+    color: @monokaiGrey4;
   }
   .CodeMirror-selected {
     // Highlighed text
-    background-color: @base06;
+    background-color: @monokaiGrey5;
   }
   .CodeMirror-focused .CodeMirror-selected {
     // Highlighed text
-    background-color: @base07;
+    background-color: @monokaiGrey5;
   }
   .CodeMirror-cursor {
     // The cursor
-    border-left: 1px solid @base06;
+    border-left: 1px solid @monokaiGrey2;
   }
   .CodeMirror-matchingbracket,
   .CodeMirror-matchingtag {
     // When you click a tag/bracket and the matching one is highlighted
-    background: @base02 !important;
-    color: @base06 !important;
-    border-bottom: 1px solid @base08 !important;
+    outline: 1px solid @monokaiYellow;
+    color: @monokaiWhite !important;
+    background: @monokaiBlack !important;
   }
   .CodeMirror-foldgutter-open:after {
     // Those little arrows in the gutter
-    color: @base03;
+    color: @monokaiGrey1;
   }
   .CodeMirror-foldgutter-folded:after {
     // The arrows after you collapse code
-    color: @base04;
+    color: @monokaiGrey1;
   }
   .CodeMirror.over-gutter,
   .CodeMirror-activeline {
     .CodeMirror-foldgutter-open:after {
       // Arrows when hovering on the gutter
-      color: @base06;
+      color: @monokaiGrey5;
     }
   }
   .CodeMirror-foldmarker {
     // The [...] marking collapsed code
-    border-color: @base06;
-    background-color: @base06;
-    color: @base02;
+    border-color: @monokaiGrey5;
+    background-color: @monokaiGrey5;
+    color: @monokaiGrey3;
   }
   .CodeMirror .CodeMirror-linewidget img.inline-widget {
-    background: rgba(0,0,0,0.1);
+    background: @monokaiInteractionInverted;
   }
   .cm-searching {
     // Ctrl + F results
-    background-color: rgba(165, 69, 67, .4);
-    color: white !important;
+    outline: 1px solid @monokaiYellow;
+    background-color: transparent;
   }
 
   /* All 'dem swatches */
 
   .CodeMirror {
-    .cm-url {
-      color: @base0F;
+    .cm-string.cm-url {
+      color: @monokaiGreen;
+      text-decoration: underline;
+    }
+    .cm-link-footref2,
+    .cm-link-barelink,
+    .cm-formatting-link.cm-link-barelink {
+      color: @monokaiWhite !important;
+    }
+    .cm-formatting-link,
+    .cm-formatting-link-string,
+    .cm-formatting-image,
+    .cm-formatting-list,
+    .cm-formatting-quote,
+    .cm-formatting-strong,
+    .cm-formatting-em {
+      color: @monokaiGrey2 !important;
+      text-decoration: none;
+    }
+    .cm-string {
+      color: @monokaiYellow;
     }
     .cm-atom,
-    .cm-formatting-list.cm-variable-3,
-    .cm-string,
     .cm-string-2,
     .cm-hr {
-      color: @base0B;
+      color: @monokaiGreen;
     }
     .cm-number,
     .cm-attribute,
     .cm-plus {
-      color: @base0A;
+      color: @monokaiRed;
     }
     .cm-def,
     .cm-property {
-      color: @base0C;
+      color: @monokaiWhite;
     }
     .cm-variable {
-      color: @base06;
+      color: @monokaiGreen;
     }
     .cm-keyword,
-    .cm-formatting-list.cm-variable-2,
     .cm-operator,
-    .cm-meta,
+    .cm-meta {
+      color: @monokaiRed;
+    }
     .cm-bracket {
-      color: @base0E;
+      color: @monokaiGrey2 !important;
     }
     .cm-comment {
-      color: @base06;
+      color: @monokaiGrey3;
       font-style: italic;
     }
     .cm-error,
     .cm-minus {
-      color: @base09;
+      color: @monokaiRed;
     }
     .cm-formatting-header {
       opacity: 0.3;
     }
     .cm-header {
-      color: @base01;
+      color: @monokaiYellow;
+    }
+    .cm-link.cm-link-footnote {
+      color: @monokaiWhite;
     }
     .cm-link {
-      color: @base0F;
-      text-underline-position: under;
+      color: @monokaiRed;
+      text-decoration: none;
     }
     .cm-rangeinfo {
-      color: @base0C;
+      color: @monokaiWhite;
     }
     .cm-builtin {
-      color: @base0F;
+      color: @monokaiBlue;
     }
     .cm-qualifier,
     .cm-tag {
-      color: @base0A;
+      color: @monokaiRed;
     }
     .cm-quote {
-      color: @base0E;
       font-style: italic;
     }
     .cm-whitespace::before {
-      color: @base06;
-      opacity: 0.4;
+      color: @monokaiGrey4;
     }
-    .cm-formatting-quote, .cm-formatting-strong, .cm-formatting-em {
-      opacity: 0.6;
+    .cm-hr {
+      color: @monokaiWhite;
     }
-    .cm-strong {
-      color: @base0A;
-    }
-    .cm-em {
-      color: @base0D;
-    }
-
     // carriage return
-    .CodeMirror-code > div > pre > span::after, .CodeMirror-line > span::after {
-      color: @base06;
+    .CodeMirror-code > div > pre > span::after,
+    .CodeMirror-line > span::after {
+      color: @monokaiGrey4;
       opacity: 0.4;
     }
 
     .cm-inline-code {
-      background: rgba(0, 0, 0, 0.1);
-      color: @base03;
-    }
-
-    .gfm-codeblock-bg.CodeMirror-linebackground {
-      background: rgba(0, 0, 0, 0.1);
-    }
-
-    .cm-table-sep, .table-row.table-row-1 {
-      color: @base0E;
+      background: @monokaiInteraction;
+      color: @monokaiOrange;
     }
   }
 
   /* Active Line Highlight support */
-  .CodeMirror-activeline-background, .CodeMirror-activeline-gutter {
-    background-color: fade(@base02, 10%) !important;
+  .CodeMirror-activeline-background,
+  .CodeMirror-activeline-gutter {
+    background-color: @monokaiInteraction !important;
   }
 }
